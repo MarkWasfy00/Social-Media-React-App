@@ -6,15 +6,14 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -p tsconfig.prod.json && vite build",
-    "test": "vitest",
-    "test:coverage": "vitest --coverage",
-    "test:ui": "vitest --ui",
     "preview": "vite preview",
+    "test": "vitest",
+    "test:ui": "vitest --ui",
     "lint": "eslint src/.",
-    "lint:fix": "eslint src/. --fix",
-    "format": "prettier --write 'src/**/*.tsx'"
+    "lint:fix": "eslint src/. --fix"
   },
   "dependencies": {
+    "@ant-design/icons": "^4.7.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.4.1"

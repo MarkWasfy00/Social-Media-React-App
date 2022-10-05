@@ -1,5 +1,5 @@
 const Home = () => {
-  return <div data-testid="home-1">Home</div>
-}
+  return <div data-testid="home-1">Home</div>;
+};
 
-export default Home
+export default Home;

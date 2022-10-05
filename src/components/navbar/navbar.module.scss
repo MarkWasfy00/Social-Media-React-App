@@ -1,0 +1,75 @@
+@use "../../styles/Reusable.style.scss" as *;
+
+nav {
+   .slogan{
+        @include flex(column, center, center);
+        padding-block: 1rem;
+        .logo {
+            width: 3rem;
+            height: $nav-height;
+            img {
+                width: 100%;
+            }
+        }
+
+        .title {
+            display: none;
+
+        }
+   }
+
+   .links {
+        padding: 2rem;
+        ul {
+            @include flex(column, center, center);
+            margin: 0;
+            padding: 0;
+            gap: .5rem;
+            list-style: none;
+            li {
+                @include flex(false, center, false);
+                color: $secondary;
+                padding: 1rem;
+                gap: .5rem;
+                border-radius: .7rem;
+                height: 1rem;
+               
+
+                &:hover {
+                    background-color: $secondary;
+                    color: $primary;
+                    cursor: pointer;
+                    transition: $transition-100;
+                    a {
+                        color: $primary;
+                    }
+                }
+
+                @include media (md) {
+                    animation: 1s forwards ease-in-out slideIn;
+                }
+
+                a {
+                    display: none;
+                    text-decoration: none;
+                    color: $secondary;
+                    font-weight: 500;
+                    @include media (md) {
+                        display: block;
+                    }
+                }
+            }
+        }
+   }
+}
+
+// Animations
+
+@keyframes slideIn {
+    from {
+        width: 55%;
+    }
+    100% {
+        width: 100%;
+    }
+}
