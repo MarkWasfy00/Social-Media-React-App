@@ -1,11 +1,13 @@
 @use "../Mixins/Breakpoints.scss" as *;
+@use "../Mixins/Flex.scss" as *;
 
 main {
     display: grid;
     grid-template-columns: 8rem 1fr;
-    height: 100vh;
-    
+    min-height: 100vh;
     @include media(md) {
         grid-template-columns: 20rem 1fr;
     }
+
+    
 }

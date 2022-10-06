@@ -1,0 +1,13 @@
+@use "../../styles/Reusable.style.scss" as *;
+
+.homefeed {
+    @include flex(false,false,space-between);
+    height: calc(100vh - $nav-height);
+
+    .feed {
+        background-color: $off-white;
+        flex-grow: 1;
+        border-radius: 1rem;
+        padding: 1rem;
+    }
+}

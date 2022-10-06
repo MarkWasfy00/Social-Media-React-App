@@ -1,0 +1,62 @@
+@use "../../styles/Reusable.style.scss" as *;
+
+.contacts {
+    padding: 1rem;
+    height: 100%;
+    overflow: auto;
+    display: none;
+
+
+    @include media(sm) {
+        display: block;
+    }
+    .search {
+        width: 95%;
+        input {
+            width: 100%;
+            border-radius: .5rem;
+            padding: .5rem;
+            border: 1px solid $border;
+            outline: none;
+        }
+    }
+
+    .friends {
+        .config {
+            padding: 1rem;
+            @include flex(false,center,space-between)
+        }
+
+        .chat {
+            ul {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                li {
+                    @include flex(false,center,space-between);
+                    padding: 1rem;
+                    gap: 1rem;
+                    border-radius: 1rem;
+                    
+                    .avatar {
+                        width: 2.5rem;
+                        img {
+                            border-radius: 50%;
+                            width: 100%;
+                        }
+                    }
+
+                    &:hover {
+                        background-color: $off-white;
+                        box-shadow: $shadow-1;
+                        transition: $transition-100;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+

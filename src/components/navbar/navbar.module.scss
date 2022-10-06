@@ -4,9 +4,9 @@ nav {
    .slogan{
         @include flex(column, center, center);
         padding-block: 1rem;
+        height: $nav-height;
         .logo {
             width: 3rem;
-            height: $nav-height;
             img {
                 width: 100%;
             }
@@ -19,7 +19,8 @@ nav {
    }
 
    .links {
-        padding: 2rem;
+        padding: 1rem;
+        height: 100%;
         ul {
             @include flex(column, center, center);
             margin: 0;
@@ -29,8 +30,8 @@ nav {
             li {
                 @include flex(false, center, false);
                 color: $secondary;
-                padding: 1rem;
-                gap: .5rem;
+                padding: 1.5rem;
+                gap: 1rem;
                 border-radius: .7rem;
                 height: 1rem;
                
@@ -67,7 +68,7 @@ nav {
 
 @keyframes slideIn {
     from {
-        width: 55%;
+        width: 65%;
     }
     100% {
         width: 100%;

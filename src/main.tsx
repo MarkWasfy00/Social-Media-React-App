@@ -10,7 +10,7 @@ import {
   createRoutesFromElements,
 } from "react-router-dom";
 
-import Home from "./pages/Home";
+import Home from "./pages/Home/Home";
 import Root from "./Root";
 
 const router = createBrowserRouter(
