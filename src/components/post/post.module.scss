@@ -1,0 +1,137 @@
+@use "../../styles/Reusable.style.scss" as *;
+
+
+.main {
+    @include flex(column,false,false);
+    gap: 1rem;
+    border-radius: 1rem;
+    padding: 1rem ;
+    background-color: $primary;
+
+    .info {
+        @include flex(false,center,false);
+        gap: 1rem;
+        .avatar {
+            width: 3rem;
+            img {
+                border-radius: 50%;
+                width: 100%;
+            }
+        }
+
+        .title {
+            @include flex(column,false,false);
+            gap: .2rem;
+        }
+
+        span {
+            margin-left: auto;
+            align-self: flex-start;
+        }
+
+    }
+
+    .post {
+        @include flex(column,false,false);
+        .images {
+            
+            img {
+                border-radius: 1rem;
+                width: 100%;
+                object-fit: cover;
+                
+            }
+        }
+    }
+
+    .reactions {
+        @include flex(false,center,false);
+        .people {
+            @include flex(false,center,false);
+            
+            .react {
+                width: 1.5rem;
+                position: relative;
+
+    
+
+                &:nth-child(2) {
+                    left: -.5rem;
+                }
+
+                &:nth-child(3) {
+                    left: -1rem;
+                }
+
+                img {
+                    border-radius: 50%;
+                    width: 100%;
+                }
+            }
+
+            .counter {
+                position: relative;
+                left: -1rem;
+                border-radius: 50%;
+                padding: .2rem;
+                width: 1.5rem;
+            }
+
+        }
+
+        .related {
+            @include flex(false,center,false);
+            margin-left: auto;
+            gap: 1rem;
+        }
+    }
+
+    .buttons {
+        @include flex(false,center,space-between);
+        border-top: 1px solid rgba(#000000, .1);
+        border-bottom: 1px solid rgba(#000000, .1);
+        padding: .5rem;
+        .interact {
+            button {
+                @include flex(false,center,space-between);
+                gap: .5rem;
+                border: none;
+                padding: .5rem;
+                background-color: transparent;
+                &:hover {
+                    background-color: $off-white;
+                    border-radius: 1rem;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+    .send {
+        @include flex(false,center,space-between);
+        gap: 1rem;
+        img {
+            width: 3rem;
+            border-radius: 50%;
+        }
+        input {
+            width: 100%;
+            padding: 1rem;
+            border-radius: 1rem;
+            border: none;
+            outline: none;
+            background-color: $off-white;
+        }
+        span {
+            background-color: lighten($tertiary,35%);
+            padding: 1rem;
+            border-radius: .5rem;
+            color: $tertiary;
+            transition: $transition-100;
+            &:hover {
+                background-color: lighten($tertiary,25%);
+                cursor: pointer;
+            }
+        }
+    }
+}

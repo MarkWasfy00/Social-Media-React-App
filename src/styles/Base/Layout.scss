@@ -3,8 +3,14 @@
 
 main {
     display: grid;
-    grid-template-columns: 8rem 1fr;
+    grid-template-columns: 1fr;
     min-height: 100vh;
+
+    @include media(xs) {
+        grid-template-columns: 8rem 1fr;
+        
+    }
+
     @include media(md) {
         grid-template-columns: 20rem 1fr;
     }

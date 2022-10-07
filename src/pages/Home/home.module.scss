@@ -1,13 +1,123 @@
 @use "../../styles/Reusable.style.scss" as *;
 
 .homefeed {
-    @include flex(false,false,space-between);
-    height: calc(100vh - $nav-height);
+    @include flex(center,false,space-between);
 
     .feed {
         background-color: $off-white;
         flex-grow: 1;
         border-radius: 1rem;
-        padding: 1rem;
+        display: grid;
+        grid-template-columns: 1fr;
+        max-width: 100rem;
+        margin-right: auto;
+
+        @include media (sm) {
+            grid-template-columns: 2fr 1fr;
+           
+        }
+
+        @include media(xs) {
+            padding: 1rem;
+        }
+
+        .posts {
+            @include flex(column,false,space-between);
+            gap: 1rem;
+            padding: 1rem;
+            .publish {
+                background-color: $primary;
+                border-radius: 1rem;
+                padding: 1rem;
+                width: 100%;
+                .info {
+                    @include flex(column,false,false);
+                    gap: 1rem;
+
+                    @include media(xs) {
+                        flex-direction: row;
+                        align-items: center;
+                    }
+                    .avatar {
+                        width: 3rem;
+                        img {
+                            border-radius: 50%;
+                            width: 100%;
+                        }
+                    }
+                    
+                    .send {
+                        flex-grow: 1;
+                        input {
+                            border: none;
+                            outline: none;
+                            padding: 1rem;
+                            border-radius: 1rem;
+                            background-color: $off-white;
+                            width: 100%;
+                        }
+                    }
+                }
+
+                .buttons {
+                    @include flex(column,false,false);
+                    padding: 1rem;
+
+                    @include media(sm) {
+                        flex-direction: row;
+                        align-items: center;
+                        justify-content: space-between;
+                    }
+                    .access {
+                        @include flex(false,center,center);
+                        gap: 1rem;
+                        .option {
+                            @include flex(false,center,center);
+                            padding: 1rem;
+                            gap: .5rem;
+
+                            .name {
+                                display: none;
+                                @include media (sm) {
+                                    display: block;
+                                }
+                            }
+
+                            &:hover {
+                                border-radius: 1rem;
+                                background-color: $off-white;
+                                cursor: pointer;
+                            }
+                        }
+                    }
+
+                    .postbutton {
+                        background-color: $tertiary;
+                        color: $primary;
+                        border: none;
+                        padding: .8rem 3rem;
+                        border-radius: .5rem;
+
+                        &:hover {
+                            cursor: pointer;
+                            background-color: darken($tertiary, 5%);
+                        }
+                    }   
+                    
+                }
+                
+            }
+
+            .homeposts {
+                @include flex(column,false,space-between);
+                gap: 1rem;
+            }
+
+        }
+
+        .activity {
+            
+        }
+
     }
 }

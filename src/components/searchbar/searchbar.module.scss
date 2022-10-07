@@ -2,11 +2,17 @@
 
 .search {
     @include flex(false,center,space-between);
+    background-color: $primary;
+    position: sticky;
+    top: 0;
     height: $nav-height;
     padding: 1rem;
     .searchbar{
         width: 100%;
-        max-width: 23rem;
+        @include media (xs) {
+            max-width: 23rem;
+        }
+
         input {
             width: 100%;
             border-radius: .5rem;

@@ -2,12 +2,13 @@
 
 .contacts {
     padding: 1rem;
-    height: 100%;
+    position: fixed;
+    height: calc(100vh - $nav-height);
+    right: 0;
     overflow: auto;
     display: none;
 
-
-    @include media(sm) {
+    @include media(md) {
         display: block;
     }
     .search {

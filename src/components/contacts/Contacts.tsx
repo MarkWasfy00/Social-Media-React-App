@@ -18,70 +18,70 @@ const Contacts = () => {
               <div className={styles.avatar}>
                 <img src="/avatars/avatar-admin.jpg" alt="avatar" />
               </div>
-              <div className={styles.name}>John Wasfy</div>
+              <div className={styles.name}>Mark Wasfy</div>
               <div className={styles.status}>online</div>
             </li>
             <li>
               <div className={styles.avatar}>
                 <img src="/avatars/avatar-admin.jpg" alt="avatar" />
               </div>
-              <div className={styles.name}>John Wasfy</div>
+              <div className={styles.name}>Mark Wasfy</div>
               <div className={styles.status}>online</div>
             </li>
             <li>
               <div className={styles.avatar}>
                 <img src="/avatars/avatar-admin.jpg" alt="avatar" />
               </div>
-              <div className={styles.name}>John Wasfy</div>
+              <div className={styles.name}>Mark Wasfy</div>
               <div className={styles.status}>online</div>
             </li>
             <li>
               <div className={styles.avatar}>
                 <img src="/avatars/avatar-admin.jpg" alt="avatar" />
               </div>
-              <div className={styles.name}>John Wasfy</div>
+              <div className={styles.name}>Mark Wasfy</div>
               <div className={styles.status}>online</div>
             </li>
             <li>
               <div className={styles.avatar}>
                 <img src="/avatars/avatar-admin.jpg" alt="avatar" />
               </div>
-              <div className={styles.name}>John Wasfy</div>
+              <div className={styles.name}>Mark Wasfy</div>
               <div className={styles.status}>online</div>
             </li>
             <li>
               <div className={styles.avatar}>
                 <img src="/avatars/avatar-admin.jpg" alt="avatar" />
               </div>
-              <div className={styles.name}>John Wasfy</div>
+              <div className={styles.name}>Mark Wasfy</div>
               <div className={styles.status}>online</div>
             </li>
             <li>
               <div className={styles.avatar}>
                 <img src="/avatars/avatar-admin.jpg" alt="avatar" />
               </div>
-              <div className={styles.name}>John Wasfy</div>
+              <div className={styles.name}>Mark Wasfy</div>
               <div className={styles.status}>online</div>
             </li>
             <li>
               <div className={styles.avatar}>
                 <img src="/avatars/avatar-admin.jpg" alt="avatar" />
               </div>
-              <div className={styles.name}>John Wasfy</div>
+              <div className={styles.name}>Mark Wasfy</div>
               <div className={styles.status}>online</div>
             </li>
             <li>
               <div className={styles.avatar}>
                 <img src="/avatars/avatar-admin.jpg" alt="avatar" />
               </div>
-              <div className={styles.name}>John Wasfy</div>
+              <div className={styles.name}>Mark Wasfy</div>
               <div className={styles.status}>online</div>
             </li>
             <li>
               <div className={styles.avatar}>
                 <img src="/avatars/avatar-admin.jpg" alt="avatar" />
               </div>
-              <div className={styles.name}>John Wasfy</div>
+              <div className={styles.name}>Mark Wasfy</div>
               <div className={styles.status}>online</div>
             </li>
           </ul>

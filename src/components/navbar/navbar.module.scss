@@ -1,10 +1,27 @@
 @use "../../styles/Reusable.style.scss" as *;
 
-nav {
+nav { 
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    background-color: rgba(255, 255, 255, .15);  
+    backdrop-filter: blur(5px);
+
+    @include media(xs) {
+        position: static;
+    }
+
    .slogan{
-        @include flex(column, center, center);
+        display: none;
         padding-block: 1rem;
         height: $nav-height;
+
+        @include media (xs) {
+            @include flex(column, center, center);
+        }
+
         .logo {
             width: 3rem;
             img {
@@ -22,11 +39,17 @@ nav {
         padding: 1rem;
         height: 100%;
         ul {
-            @include flex(column, center, center);
+            @include flex(false, center, center);
+            flex-wrap: wrap;
             margin: 0;
             padding: 0;
             gap: .5rem;
             list-style: none;
+
+            @include media (xs) {
+                flex-direction: column;
+            }
+
             li {
                 @include flex(false, center, false);
                 color: $secondary;
@@ -39,8 +62,8 @@ nav {
                 &:hover {
                     background-color: $secondary;
                     color: $primary;
-                    cursor: pointer;
                     transition: $transition-100;
+                    cursor: pointer;
                     a {
                         color: $primary;
                     }
