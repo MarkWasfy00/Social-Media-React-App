@@ -5,6 +5,7 @@ import {
 } from "@ant-design/icons";
 import Contacts from "../../components/contacts/Contacts";
 import Post from "../../components/post/Post";
+import Suggestion from "../../components/suggestion/Suggestion";
 import styles from "./home.module.scss";
 
 const Home = () => {
@@ -45,7 +46,9 @@ const Home = () => {
             <Post />
           </div>
         </div>
-        <div className={styles.activity}>activities</div>
+        <div className={styles.activity}>
+          <Suggestion />
+        </div>
       </section>
       <section>
         <Contacts />

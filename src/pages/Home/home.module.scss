@@ -1,19 +1,23 @@
 @use "../../styles/Reusable.style.scss" as *;
 
 .homefeed {
-    @include flex(center,false,space-between);
+    display: grid;
+    grid-template-columns: 1fr;
+    @include media(md) {
+        grid-template-columns: 5fr 20rem;
+        gap: 1rem;
+    }
 
     .feed {
         background-color: $off-white;
-        flex-grow: 1;
         border-radius: 1rem;
         display: grid;
         grid-template-columns: 1fr;
-        max-width: 100rem;
         margin-right: auto;
-
+        padding: 1rem;
         @include media (sm) {
-            grid-template-columns: 2fr 1fr;
+            grid-template-columns:  2fr 1fr;
+            gap: 1rem;
            
         }
 
@@ -24,12 +28,13 @@
         .posts {
             @include flex(column,false,space-between);
             gap: 1rem;
-            padding: 1rem;
+            
             .publish {
                 background-color: $primary;
                 border-radius: 1rem;
                 padding: 1rem;
                 width: 100%;
+                box-shadow: $shadow-1;
                 .info {
                     @include flex(column,false,false);
                     gap: 1rem;

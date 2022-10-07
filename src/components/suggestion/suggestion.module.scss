@@ -1,0 +1,63 @@
+@use "../../styles/Reusable.style.scss" as *;
+
+.card {
+    width: 100%;
+    background-color: $primary;
+    border-radius: 1rem;
+    
+    .head {
+        @include flex(false,center,space-between);
+        padding: 1rem;
+        border-bottom: 1px solid rgba(#000000, .1);
+    }
+
+    .body {
+        @include flex(column,false,false);
+        gap: 1rem;
+        padding: 1rem;
+        .info {
+            @include flex(false,center,false);
+            gap: 1rem;
+            .avatar {
+                width: 5rem;
+                img {
+                    border-radius: 50%;
+                    width: 100%;
+                }
+            }
+
+            .contact {
+                @include flex(column,false,false);
+                gap: .2rem;
+
+                .social {
+                    @include flex(false,center,false);
+                    gap: .5rem;
+                }
+            }
+
+        }
+
+        .buttons {
+            @include flex(false,center,space-between);
+            gap: .5rem;
+
+            button {
+                border: none;
+                padding: 1rem 4rem;
+                border-radius: .5rem;
+            }
+            
+            .ignore {
+                background-color: transparent;
+                border: 1px solid darken($off-white, 20%);
+                color: darken($off-white, 20%);
+            }
+
+            .follow {
+                background-color: $tertiary;
+                color: $primary;
+            }
+        }
+    }
+}

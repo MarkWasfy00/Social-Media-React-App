@@ -1,5 +1,4 @@
-@use "../Mixins/Breakpoints.scss" as *;
-@use "../Mixins/Flex.scss" as *;
+@use "../Reusable.style.scss" as *;
 
 main {
     display: grid;
@@ -7,12 +6,12 @@ main {
     min-height: 100vh;
 
     @include media(xs) {
-        grid-template-columns: 8rem 1fr;
+        grid-template-columns: $nav-width-xs 1fr;
         
     }
 
     @include media(md) {
-        grid-template-columns: 20rem 1fr;
+        grid-template-columns: $nav-width-md 1fr;
     }
 
     

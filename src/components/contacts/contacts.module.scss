@@ -2,7 +2,8 @@
 
 .contacts {
     padding: 1rem;
-    position: fixed;
+    position: sticky;
+    top: $nav-height;
     height: calc(100vh - $nav-height);
     right: 0;
     overflow: auto;
