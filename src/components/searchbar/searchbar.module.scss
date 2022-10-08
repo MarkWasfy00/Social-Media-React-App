@@ -8,6 +8,7 @@
     height: $nav-height;
     z-index: 999;
     padding: 1rem;
+
     .searchbar{
         width: 100%;
         @include media (xs) {

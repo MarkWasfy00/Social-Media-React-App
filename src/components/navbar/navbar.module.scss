@@ -56,14 +56,15 @@ nav {
                 flex-direction: column;
             }
 
-            li {
+            .link {
                 @include flex(false, center, false);
+                text-decoration: none;
                 color: $secondary;
                 padding: 1.5rem;
                 gap: 1rem;
                 border-radius: .7rem;
                 height: 1rem;
-               
+            
 
                 &:hover {
                     background-color: $secondary;
@@ -87,6 +88,16 @@ nav {
                     @include media (md) {
                         display: block;
                     }
+                }
+            }
+            
+            .activelink {
+                background-color: $secondary;
+                color: $primary;
+                transition: $transition-100;
+                cursor: pointer;
+                a {
+                    color: $primary;
                 }
             }
         }

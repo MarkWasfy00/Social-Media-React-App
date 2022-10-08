@@ -10,8 +10,15 @@ import {
   SettingOutlined,
   LogoutOutlined,
 } from "@ant-design/icons";
+import { useState } from "react";
 
 const Navbar = () => {
+  const [selected, setSelected] = useState("Feed");
+
+  const handleChange = (data: string) => {
+    setSelected(data);
+  };
+
   return (
     <>
       <nav>
@@ -23,38 +30,86 @@ const Navbar = () => {
         </div>
         <div className={styles.links}>
           <ul>
-            <li>
+            <Link
+              className={`${styles.link}${
+                selected === "Feed" ? ` ${styles.activelink}` : ""
+              }`}
+              onClick={() => handleChange("Feed")}
+              to="/"
+            >
               <AppstoreOutlined />
-              <Link to="/">Feed</Link>
-            </li>
-            <li>
+              <a>Feed</a>
+            </Link>
+            <Link
+              className={`${styles.link}${
+                selected === "Community" ? ` ${styles.activelink}` : ""
+              }`}
+              onClick={() => handleChange("Community")}
+              to="/my-community"
+            >
               <TeamOutlined />
-              <Link to="/">My community</Link>
-            </li>
-            <li>
+              <a>My community</a>
+            </Link>
+            <Link
+              className={`${styles.link}${
+                selected === "Messages" ? ` ${styles.activelink}` : ""
+              }`}
+              onClick={() => handleChange("Messages")}
+              to="/messages"
+            >
               <MailOutlined />
-              <Link to="/">Messages</Link>
-            </li>
-            <li>
+              <a>Messages</a>
+            </Link>
+            <Link
+              className={`${styles.link}${
+                selected === "Notification" ? ` ${styles.activelink}` : ""
+              }`}
+              onClick={() => handleChange("Notification")}
+              to="/notification"
+            >
               <BellOutlined />
-              <Link to="/">Notification</Link>
-            </li>
-            <li>
+              <a>Notification</a>
+            </Link>
+            <Link
+              className={`${styles.link}${
+                selected === "Explore" ? ` ${styles.activelink}` : ""
+              }`}
+              onClick={() => handleChange("Explore")}
+              to="/explore"
+            >
               <GlobalOutlined />
-              <Link to="/">Explore</Link>
-            </li>
-            <li>
+              <a>Explore</a>
+            </Link>
+            <Link
+              className={`${styles.link}${
+                selected === "Profile" ? ` ${styles.activelink}` : ""
+              }`}
+              onClick={() => handleChange("Profile")}
+              to="/profile"
+            >
               <UserOutlined />
-              <Link to="/">Profile</Link>
-            </li>
-            <li>
+              <a>Profile</a>
+            </Link>
+            <Link
+              className={`${styles.link}${
+                selected === "Settings" ? ` ${styles.activelink}` : ""
+              }`}
+              onClick={() => handleChange("Settings")}
+              to="/settings"
+            >
               <SettingOutlined />
-              <Link to="/">Settings</Link>
-            </li>
-            <li>
+              <a>Settings</a>
+            </Link>
+            <Link
+              className={`${styles.link}${
+                selected === "Logout" ? ` ${styles.activelink}` : ""
+              }`}
+              onClick={() => handleChange("Logout")}
+              to="/logout"
+            >
               <LogoutOutlined />
-              <Link to="/">Logout</Link>
-            </li>
+              <a>Logout</a>
+            </Link>
           </ul>
         </div>
       </nav>
