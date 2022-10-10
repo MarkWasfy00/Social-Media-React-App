@@ -1,0 +1,85 @@
+@use "../../styles/Reusable.style.scss" as *;
+
+
+img {
+    width: 1rem;
+}
+
+.card {
+    @include flex(column,false,false);
+    gap: 1rem;
+    background-color: $primary;
+    border-radius: 1rem;
+    .head {
+        @include flex(false,center,space-between);
+        padding: 1rem;
+        border-bottom: $seprator;
+    }
+
+    .body {
+        @include flex(column,false,space-between);
+        padding: 1rem;
+        gap: 1rem;
+        .event {
+            @include flex(column,false,space-between);
+            gap: 1rem;
+            background-color: $off-white;
+            border-radius: 1rem;
+            padding: 1rem;
+            .about {
+                @include flex(false,center,space-between);
+                .topic {
+                    span {
+                        width: 5rem;
+                        background-color: $primary;
+                        padding: 2rem 1rem;
+                        border-radius: 1rem;
+                        font-size: 1.5rem;
+                        color: $tertiary;
+                    }
+                }
+
+                .info {
+                    max-width: 15rem;
+                    p {
+                        overflow: hidden;
+                        display: -webkit-box;
+                        -webkit-line-clamp: 2;
+                        -webkit-box-orient: vertical;
+                    }
+                }
+            }
+
+            .reaction {
+                @include flex(false,center,space-between);
+                border-top: $seprator;
+                padding-top: 1rem;
+
+                .people {
+                    @include flex(false,center,false);
+                    position: relative;
+
+                    img {
+                        width: 1.5rem;
+                        border-radius: 50%;
+                        position: relative;
+                        
+                        &:nth-child(2) {
+                            left: -.5rem;
+                        }
+                        &:nth-child(3) {
+                            left: -1rem;
+                        }
+                    }
+                    .rest {
+                        position: relative;
+                        left: -1rem;
+                        padding: .2rem;
+                        border-radius: 50%;
+                    }
+                }
+            }
+
+        }
+    }
+}

@@ -3,6 +3,7 @@
 .homefeed {
     display: grid;
     grid-template-columns: 1fr;
+    
     @include media(md) {
         grid-template-columns: 5fr 20rem;
         gap: 1rem;
@@ -15,6 +16,7 @@
         grid-template-columns: 1fr;
         margin-right: auto;
         padding: 1rem;
+        
         @include media (sm) {
             grid-template-columns:  2fr 1fr;
             gap: 1rem;
@@ -121,6 +123,8 @@
         }
 
         .activity {
+            @include flex(column,false,false);
+            gap: 1rem;            
             
         }
 

@@ -4,11 +4,10 @@
     width: 100%;
     background-color: $primary;
     border-radius: 1rem;
-    
     .head {
         @include flex(false,center,space-between);
         padding: 1rem;
-        border-bottom: 1px solid rgba(#000000, .1);
+        border-bottom: $seprator;
     }
 
     .body {

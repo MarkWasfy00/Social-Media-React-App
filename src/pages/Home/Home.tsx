@@ -3,7 +3,9 @@ import {
   SmileOutlined,
   VideoCameraOutlined,
 } from "@ant-design/icons";
+
 import Contacts from "../../components/contacts/Contacts";
+import Event from "../../components/event/Event";
 import Post from "../../components/post/Post";
 import Suggestion from "../../components/suggestion/Suggestion";
 import styles from "./home.module.scss";
@@ -16,7 +18,7 @@ const Home = () => {
           <div className={styles.publish}>
             <div className={styles.info}>
               <div className={styles.avatar}>
-                <img src="./avatars/avatar-admin.jpg" alt="avatar" />
+                <img src="/avatars/avatar-admin.jpg" alt="avatar" />
               </div>
               <div className={styles.send}>
                 <input type="text" placeholder="What's happening?" />
@@ -44,10 +46,14 @@ const Home = () => {
             <Post />
             <Post />
             <Post />
+            <Post />
+            <Post />
+            <Post />
           </div>
         </div>
         <div className={styles.activity}>
           <Suggestion />
+          <Event />
         </div>
       </section>
       <section>
