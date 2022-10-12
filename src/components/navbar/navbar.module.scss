@@ -35,7 +35,7 @@ nav {
             display: none;
             font-weight: 500;
             font-size: 2rem;
-            @include media (md) {
+            @include media (hmd) {
                 display: block;
             }
         }
@@ -76,7 +76,7 @@ nav {
                     }
                 }
 
-                @include media (md) {
+                @include media (hmd) {
                     animation: 1s forwards ease-in-out slideIn;
                 }
 
@@ -85,7 +85,7 @@ nav {
                     text-decoration: none;
                     color: $secondary;
                     font-weight: 500;
-                    @include media (md) {
+                    @include media (hmd) {
                         display: block;
                     }
                 }

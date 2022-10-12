@@ -7,8 +7,20 @@
         @media (min-width:970px){
             @content;
         }
+    }@else if $dimension == hsm {
+        @media (min-width:1200px){
+            @content;
+        }
     }@else if $dimension == md {
         @media (min-width:1440px){
+            @content;
+        }
+    }@else if $dimension == lmd {
+        @media (min-width: 1500px) {
+            @content;
+        }
+    }@else if $dimension == hmd {
+        @media (min-width: 1700px) {
             @content;
         }
     }@else if $dimension == lg {

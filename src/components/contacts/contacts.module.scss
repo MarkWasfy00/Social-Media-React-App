@@ -9,6 +9,10 @@
     overflow: auto;
     display: none;
 
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
     @include media(md) {
         display: block;
     }

@@ -4,7 +4,7 @@
     display: grid;
     grid-template-columns: 1fr;
     
-    @include media(md) {
+    @include media(lmd) {
         grid-template-columns: 5fr 20rem;
         gap: 1rem;
     }
@@ -17,7 +17,8 @@
         margin-right: auto;
         padding: 1rem;
         
-        @include media (sm) {
+        
+        @include media (hsm) {
             grid-template-columns:  2fr 1fr;
             gap: 1rem;
            

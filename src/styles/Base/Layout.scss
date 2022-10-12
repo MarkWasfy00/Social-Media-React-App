@@ -9,7 +9,7 @@ main {
         
     }
 
-    @include media(md) {
+    @include media(hmd) {
         grid-template-columns: $nav-width-md 1fr;
     }
 
