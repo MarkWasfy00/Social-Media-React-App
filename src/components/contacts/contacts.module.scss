@@ -13,7 +13,7 @@
         display: none;
     }
 
-    @include media(md) {
+    @include media(lmd) {
         display: block;
     }
     .search {
@@ -49,6 +49,31 @@
                         img {
                             border-radius: 50%;
                             width: 100%;
+                        }
+                    }
+
+                    .name {
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        max-width: 200px;
+                    }
+
+
+                    .status {
+                        div {
+                            padding: .3rem;
+                            border-radius: 50%;
+                        }
+                        .online {
+                            background-color: green;
+                        }
+
+                        .offline {
+                            white-space: nowrap;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            width: 55px;
                         }
                     }
 

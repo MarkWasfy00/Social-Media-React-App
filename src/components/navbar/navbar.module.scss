@@ -20,12 +20,12 @@ nav {
         height: $nav-height;
 
         @include media (xs) {
-            @include flex(false, center, center);
+            @include flex(false, flex-end, center);
             gap: 1rem;
         }
 
         .logo {
-            width: 3rem;
+            width: 2rem;
             img {
                 width: 100%;
             }
@@ -71,7 +71,7 @@ nav {
                     color: $primary;
                     transition: $transition-100;
                     cursor: pointer;
-                    a {
+                    .name {
                         color: $primary;
                     }
                 }
@@ -80,7 +80,7 @@ nav {
                     animation: 1s forwards ease-in-out slideIn;
                 }
 
-                a {
+                .name {
                     display: none;
                     text-decoration: none;
                     color: $secondary;
@@ -96,7 +96,7 @@ nav {
                 color: $primary;
                 transition: $transition-100;
                 cursor: pointer;
-                a {
+                .name {
                     color: $primary;
                 }
             }

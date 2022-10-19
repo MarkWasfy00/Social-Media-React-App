@@ -14,10 +14,12 @@ import Home from "./pages/Home/Home";
 import Root from "./Root";
 import Community from "./pages/Community/Community";
 
+import { homeLoader } from "./util/api";
+
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<Root />}>
-      <Route index element={<Home />} />
+      <Route index element={<Home />} loader={homeLoader} />
       <Route path="/my-community" element={<Community />} />
     </Route>
   )

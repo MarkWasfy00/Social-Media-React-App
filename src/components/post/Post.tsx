@@ -5,25 +5,36 @@ import {
   RightOutlined,
   ShareAltOutlined,
 } from "@ant-design/icons";
+import { UserType } from "../../data/users";
 import styles from "./post.module.scss";
 
-const Post = () => {
+type PostProps = {
+  user: UserType;
+  images: string[];
+  description: string;
+  name: string;
+  avatar: string;
+};
+
+const Post = ({ user, images, description, name, avatar }: PostProps) => {
   return (
     <div className={styles.main}>
       <div className={styles.info}>
         <div className={styles.avatar}>
-          <img src="/avatars/avatar-admin.jpg" alt="avatar" />
+          <img src={user.avatar} alt="avatar" />
         </div>
         <div className={styles.title}>
-          <div className={styles.name}>Mark Wasfy</div>
+          <div className={styles.name}>{user.name}</div>
           <div className={styles.time}>15h ago</div>
         </div>
         <EllipsisOutlined />
       </div>
       <div className={styles.post}>
-        <p className={styles.about}>Was a really good picture by me</p>
+        <p className={styles.about}>{description}</p>
         <div className={styles.images}>
-          <img src="/images/post.jpg" alt="post" />
+          {images.map((img) => {
+            return <img key={img} src={img} alt="post" />;
+          })}
         </div>
       </div>
       <div className={styles.reactions}>
@@ -65,7 +76,7 @@ const Post = () => {
         </div>
       </div>
       <div className={styles.send}>
-        <img src="/avatars/avatar-admin.jpg" alt="avatar" />
+        <img src={avatar} alt="avatar" />
         <input type="text" placeholder="Write a comment..." />
         <RightOutlined />
       </div>

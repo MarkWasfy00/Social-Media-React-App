@@ -1,7 +1,12 @@
 import { EllipsisOutlined } from "@ant-design/icons";
+import { UserType } from "../../data/users";
 import styles from "./contacts.module.scss";
 
-const Contacts = () => {
+type ContactsProps = {
+  users: UserType[];
+};
+
+const Contacts = ({ users }: ContactsProps) => {
   return (
     <div className={styles.contacts}>
       <div className={styles.search}>
@@ -14,76 +19,23 @@ const Contacts = () => {
         </div>
         <div className={styles.chat}>
           <ul>
-            <li>
-              <div className={styles.avatar}>
-                <img src="/avatars/avatar-admin.jpg" alt="avatar" />
-              </div>
-              <div className={styles.name}>Mark Wasfy</div>
-              <div className={styles.status}>online</div>
-            </li>
-            <li>
-              <div className={styles.avatar}>
-                <img src="/avatars/avatar-admin.jpg" alt="avatar" />
-              </div>
-              <div className={styles.name}>Mark Wasfy</div>
-              <div className={styles.status}>online</div>
-            </li>
-            <li>
-              <div className={styles.avatar}>
-                <img src="/avatars/avatar-admin.jpg" alt="avatar" />
-              </div>
-              <div className={styles.name}>Mark Wasfy</div>
-              <div className={styles.status}>online</div>
-            </li>
-            <li>
-              <div className={styles.avatar}>
-                <img src="/avatars/avatar-admin.jpg" alt="avatar" />
-              </div>
-              <div className={styles.name}>Mark Wasfy</div>
-              <div className={styles.status}>online</div>
-            </li>
-            <li>
-              <div className={styles.avatar}>
-                <img src="/avatars/avatar-admin.jpg" alt="avatar" />
-              </div>
-              <div className={styles.name}>Mark Wasfy</div>
-              <div className={styles.status}>online</div>
-            </li>
-            <li>
-              <div className={styles.avatar}>
-                <img src="/avatars/avatar-admin.jpg" alt="avatar" />
-              </div>
-              <div className={styles.name}>Mark Wasfy</div>
-              <div className={styles.status}>online</div>
-            </li>
-            <li>
-              <div className={styles.avatar}>
-                <img src="/avatars/avatar-admin.jpg" alt="avatar" />
-              </div>
-              <div className={styles.name}>Mark Wasfy</div>
-              <div className={styles.status}>online</div>
-            </li>
-            <li>
-              <div className={styles.avatar}>
-                <img src="/avatars/avatar-admin.jpg" alt="avatar" />
-              </div>
-              <div className={styles.name}>Mark Wasfy</div>
-              <div className={styles.status}>online</div>
-            </li>
-            <li>
-              <div className={styles.avatar}>
-                <img src="/avatars/avatar-admin.jpg" alt="avatar" />
-              </div>
-              <div className={styles.name}>Mark Wasfy</div>
-              <div className={styles.status}>online</div>
-            </li>
-            <li>
-              <div className={styles.avatar}>
-                <img src="/avatars/avatar-admin.jpg" alt="avatar" />
-              </div>
-              <div className={styles.name}>Mark Wasfy</div>
-              <div className={styles.status}>online</div>
-            </li>
+            {users.map((user) => {
+              return (
+                <li key={user.name}>
+                  <div className={styles.avatar}>
+                    <img src={user.avatar} alt="avatar" />
+                  </div>
+                  <div className={styles.name}>{user.name}</div>
+                  <div className={styles.status}>
+                    {user.online ? (
+                      <div className={styles.online}></div>
+                    ) : (
+                      <div className={styles.offline}>10min</div>
+                    )}
+                  </div>
+                </li>
+              );
+            })}
           </ul>
         </div>
       </div>

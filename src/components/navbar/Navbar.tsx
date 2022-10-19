@@ -24,9 +24,9 @@ const Navbar = () => {
       <nav>
         <div className={styles.slogan}>
           <div className={styles.logo}>
-            <img src="/images/Logo.png" alt="GreenLife" />
+            <img src="/images/Logo.png" alt="Meetmax" />
           </div>
-          <div className={styles.title}>GreenLife</div>
+          <div className={styles.title}>Meetmax</div>
         </div>
         <div className={styles.links}>
           <ul>
@@ -38,7 +38,7 @@ const Navbar = () => {
               to="/"
             >
               <AppstoreOutlined />
-              <a>Feed</a>
+              <div className={styles.name}>Feed</div>
             </Link>
             <Link
               className={`${styles.link}${
@@ -48,7 +48,7 @@ const Navbar = () => {
               to="/my-community"
             >
               <TeamOutlined />
-              <a>My community</a>
+              <div className={styles.name}>My community</div>
             </Link>
             <Link
               className={`${styles.link}${
@@ -58,7 +58,7 @@ const Navbar = () => {
               to="/messages"
             >
               <MailOutlined />
-              <a>Messages</a>
+              <div className={styles.name}>Messages</div>
             </Link>
             <Link
               className={`${styles.link}${
@@ -68,7 +68,7 @@ const Navbar = () => {
               to="/notification"
             >
               <BellOutlined />
-              <a>Notification</a>
+              <div className={styles.name}>Notification</div>
             </Link>
             <Link
               className={`${styles.link}${
@@ -78,7 +78,7 @@ const Navbar = () => {
               to="/explore"
             >
               <GlobalOutlined />
-              <a>Explore</a>
+              <div className={styles.name}>Explore</div>
             </Link>
             <Link
               className={`${styles.link}${
@@ -88,7 +88,7 @@ const Navbar = () => {
               to="/profile"
             >
               <UserOutlined />
-              <a>Profile</a>
+              <div className={styles.name}>Profile</div>
             </Link>
             <Link
               className={`${styles.link}${
@@ -98,7 +98,7 @@ const Navbar = () => {
               to="/settings"
             >
               <SettingOutlined />
-              <a>Settings</a>
+              <div className={styles.name}>Settings</div>
             </Link>
             <Link
               className={`${styles.link}${
@@ -108,7 +108,7 @@ const Navbar = () => {
               to="/logout"
             >
               <LogoutOutlined />
-              <a>Logout</a>
+              <div className={styles.name}>Logout</div>
             </Link>
           </ul>
         </div>
