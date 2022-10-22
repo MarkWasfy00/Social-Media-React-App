@@ -14,9 +14,17 @@ type PostProps = {
   description: string;
   name: string;
   avatar: string;
+  friends: UserType[];
 };
 
-const Post = ({ user, images, description, name, avatar }: PostProps) => {
+const Post = ({
+  user,
+  images,
+  description,
+  name,
+  avatar,
+  friends,
+}: PostProps) => {
   return (
     <div className={styles.main}>
       <div className={styles.info}>
@@ -33,22 +41,22 @@ const Post = ({ user, images, description, name, avatar }: PostProps) => {
         <p className={styles.about}>{description}</p>
         <div className={styles.images}>
           {images.map((img) => {
-            return <img key={img} src={img} alt="post" />;
+            return <img key={img} src={img} loading="lazy" alt="post" />;
           })}
         </div>
       </div>
       <div className={styles.reactions}>
         <div className={styles.people}>
-          <div className={styles.react}>
-            <img src="/avatars/avatar-admin.jpg" alt="avatar" />
+          {friends.map((user) => {
+            return (
+              <div key={user.name} className={styles.react}>
+                <img src={user.avatar} alt="avatar" />
+              </div>
+            );
+          })}
+          <div className={styles.counter}>
+            +{Math.floor(Math.random() * 100) + 3}
           </div>
-          <div className={styles.react}>
-            <img src="/avatars/avatar-admin.jpg" alt="avatar" />
-          </div>
-          <div className={styles.react}>
-            <img src="/avatars/avatar-admin.jpg" alt="avatar" />
-          </div>
-          <div className={styles.counter}>+9</div>
         </div>
         <div className={styles.related}>
           <div className={styles.comment}>3 comments</div>

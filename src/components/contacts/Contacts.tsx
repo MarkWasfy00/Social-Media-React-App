@@ -1,4 +1,5 @@
 import { EllipsisOutlined } from "@ant-design/icons";
+import { useState } from "react";
 import { UserType } from "../../data/users";
 import styles from "./contacts.module.scss";
 
@@ -7,10 +8,19 @@ type ContactsProps = {
 };
 
 const Contacts = ({ users }: ContactsProps) => {
+  const [search, setSearch] = useState("");
+  const filterUsers = users.filter((usr) =>
+    usr.name.toLowerCase().includes(search.toLowerCase())
+  );
   return (
     <div className={styles.contacts}>
       <div className={styles.search}>
-        <input type="text" placeholder="Search Friends !" />
+        <input
+          type="text"
+          placeholder="Search Friends !"
+          value={search}
+          onChange={(e) => setSearch(e.target.value)}
+        />
       </div>
       <div className={styles.friends}>
         <div className={styles.config}>
@@ -19,7 +29,7 @@ const Contacts = ({ users }: ContactsProps) => {
         </div>
         <div className={styles.chat}>
           <ul>
-            {users.map((user) => {
+            {filterUsers.map((user) => {
               return (
                 <li key={user.name}>
                   <div className={styles.avatar}>

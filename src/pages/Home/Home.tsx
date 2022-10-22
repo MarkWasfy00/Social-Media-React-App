@@ -49,7 +49,10 @@ const Home = () => {
           </div>
           <div className={styles.homeposts}>
             {posts.map((post, key) => {
-              return <Post key={key} {...post} {...admin} />;
+              const friends = users
+                .filter((usr) => usr.name !== post.user.name)
+                .slice(0, 3);
+              return <Post key={key} {...post} {...admin} friends={friends} />;
             })}
           </div>
         </div>
